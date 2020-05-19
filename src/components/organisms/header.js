@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { TitleLabel, Select } from '../atoms/header';
+import { HeaderContainer, TitleLabel, Select } from '../atoms/header';
 import Container from '../atoms/common/Container';
 
 import { NavigationButton } from '../molecules';
@@ -14,7 +14,7 @@ export default function CalendarHeader() {
 	const select = useInputValue();
 
 	return (
-		<Container flex={1} justifyContent="space-between">
+		<HeaderContainer>
 			<Container>
 				<Container margin="0 24px 0 0">
 					<NavigationButton />
@@ -32,6 +32,6 @@ export default function CalendarHeader() {
 					Greenwich Mean Time - Other ({DateTimeHelper.getGMT()})
 				</option>
 			</Select>
-		</Container>
+		</HeaderContainer>
 	);
 }
