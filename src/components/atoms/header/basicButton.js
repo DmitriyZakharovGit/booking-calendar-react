@@ -5,6 +5,7 @@ export default styled.button`
     width: 44px;
     height: 40px;
     border: 1px solid #D8D7E0;
+    background: #ffffff;
     
     :first-of-type {
         border-right: 0;

@@ -6,5 +6,5 @@ import BasicButton from './basicButton';
 export default styled(BasicButton)`
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
-    background: src(${ArrowLeftIcon});
+    background: url(${ArrowLeftIcon}) center no-repeat;
 `;

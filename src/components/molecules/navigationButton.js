@@ -11,9 +11,9 @@ export default function NavigationButton() {
 	} = useContext(Context);
 
 	return (
-		<div>
+		<>
 			<PrevButton onClick={setPrevWeek} />
 			<NextButton onClick={setNextWeek} />
-		</div>
+		</>
 	);
 }

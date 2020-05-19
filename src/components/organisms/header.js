@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 
+import { Container } from '../atoms/common';
 import { NavigationButton } from '../molecules';
 
 import Context from '../../contexts';
@@ -9,7 +10,9 @@ export default function CalendarHeader() {
 
 	return (
 		<>
-			<NavigationButton />
+			<Container margin="0 24px 0 0">
+				<NavigationButton />
+			</Container>
 		</>
 	);
 }
