@@ -7,9 +7,10 @@ import { NavigationButton } from '../molecules';
 
 import Context from '../../contexts';
 import { useInputValue } from '../../hooks';
+import { DateTimeHelper } from '../../helpers';
 
 export default function CalendarHeader() {
-	const { currentDate } = useContext(Context);
+	const { week } = useContext(Context);
 	const select = useInputValue();
 
 	return (
@@ -19,11 +20,17 @@ export default function CalendarHeader() {
 					<NavigationButton />
 				</Container>
 
-				<TitleLabel>{currentDate}</TitleLabel>
+				<TitleLabel>{DateTimeHelper.getMountYear(week)}</TitleLabel>
 			</Container>
 
 			<Select {...select.bind}>
-				<option>Pacific Time – US and Canada (7:00 AM)</option>
+				<option>
+					Pacific Time – US and Canada ({DateTimeHelper.getPacificTime()})
+				</option>
+
+				<option>
+					Greenwich Mean Time - Other ({DateTimeHelper.getGMT()})
+				</option>
 			</Select>
 		</Container>
 	);

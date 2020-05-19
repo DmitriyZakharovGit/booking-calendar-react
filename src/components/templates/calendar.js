@@ -16,6 +16,7 @@ export default function CalendarForm() {
 		onChange: setTimezone,
 		setNextWeek: () => setWeek(DateTimeHelper.nextWeek(week)),
 		setPrevWeek: () => setWeek(DateTimeHelper.prevWeek(week)),
+		week,
 	};
 
 	return (
