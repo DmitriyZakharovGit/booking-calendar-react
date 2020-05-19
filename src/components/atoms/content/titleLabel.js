@@ -8,4 +8,5 @@ export default styled.label`
     line-height: 32px;
     text-align: center;
     width: 50px;
+    margin-bottom: 20px;
 `;

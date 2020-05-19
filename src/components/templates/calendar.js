@@ -20,6 +20,7 @@ export default function CalendarForm() {
 	};
 
 	const ContentValues = {
+		date,
 		timezone,
 	};
 
