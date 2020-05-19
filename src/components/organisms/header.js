@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import { HeaderContainer, TitleLabel, Select } from '../atoms/header';
-import Container from '../atoms/common/Container';
+import { Container } from '../atoms/common';
 
 import { NavigationButton } from '../molecules';
 
@@ -10,7 +10,7 @@ import { useInputValue } from '../../hooks';
 import { DateTimeHelper } from '../../helpers';
 
 export default function CalendarHeader() {
-	const { week } = useContext(Context);
+	const { date } = useContext(Context);
 	const select = useInputValue();
 
 	return (
@@ -20,7 +20,7 @@ export default function CalendarHeader() {
 					<NavigationButton />
 				</Container>
 
-				<TitleLabel>{DateTimeHelper.getMountYear(week)}</TitleLabel>
+				<TitleLabel>{DateTimeHelper.getMonthYear(date)}</TitleLabel>
 			</Container>
 
 			<Select {...select.bind}>
