@@ -26,16 +26,3 @@ mock.onGet('/application/timeline/getList')
 	.reply(200, {
 		items: getTimeline(),
 	});
-
-mock.onGet('/application/timeline/getGroupInfo')
-	.reply(200, {
-		content: 'Join a group session! \nCourse: English Composition \nTopic: "How to write a great thesis statement"',
-		occupiedPlaces: 3,
-		totalPlaces: 6,
-	});
-
-mock.onGet('/application/timeline/getPrivateInfo')
-	.reply(200, {
-		content: 'Book a Private Tutoring Session',
-		timestamp: 30,
-	});

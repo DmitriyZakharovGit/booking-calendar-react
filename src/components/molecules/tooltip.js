@@ -3,23 +3,24 @@ import React, { useState, useContext, useEffect } from 'react';
 import { Tooltip } from '../atoms/content';
 
 import Context from '../../contexts';
-import { CalendarService } from '../../services';
 
 export default function TooltipWrapper() {
 	const [tooltipInfo, setTooltipInfo] = useState(null);
-	const { time, isGroup, styles } = useContext(Context);
+	const { isGroup, styles } = useContext(Context);
 
 	useEffect(() => {
-		const method = isGroup
-			? CalendarService.getGroupInfo : CalendarService.getPrivateInfo;
+		const groupInfo = {
+			content: 'Join a group session! \nCourse: English Composition \nTopic: "How to write a great thesis statement"',
+			occupiedPlaces: 3,
+			totalPlaces: 6,
+		};
 
-		method(time)
-			.then((responseData) => {
-				setTooltipInfo(responseData.data);
-			})
-			.catch(() => {});
+		const privateInfo = {
+			content: 'Book a Private Tutoring Session',
+			timestamp: 30,
+		};
 
-		return () => CalendarService.axiosSource.cancel('Axios request canceled.');
+		setTooltipInfo(isGroup ? groupInfo : privateInfo);
 	}, []);
 
 	return (
