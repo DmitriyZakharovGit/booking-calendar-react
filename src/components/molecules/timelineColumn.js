@@ -8,7 +8,7 @@ import TimelineButton from './timelineButton';
 import { DateTimeHelper } from '../../helpers';
 import { CalendarService } from '../../services';
 
-export default ({ date }) => {
+export default React.memo(({ date }) => {
 	const [times, setTimes] = useState([]);
 
 	const DateFormat = DateTimeHelper.getDayWeek(date.format());
@@ -30,4 +30,4 @@ export default ({ date }) => {
 			))}
 		</Container>
 	);
-};
+});

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import DefaultGroup from '../../../assets/default/group.svg';
-import ActiveGroup from '../../../assets/active/group.svg';
-import HoverGroup from '../../../assets/hover/group.svg';
-import DisabledGroup from '../../../assets/disabled/group.svg';
+import DefaultGroup from 'assets/default/group.svg';
+import ActiveGroup from 'assets/active/group.svg';
+import HoverGroup from 'assets/hover/group.svg';
+import DisabledGroup from 'assets/disabled/group.svg';
 
 const Button = styled.button`
     outline: 0;

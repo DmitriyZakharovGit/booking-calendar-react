@@ -1,12 +1,12 @@
 import React, { useContext, useRef, useState } from 'react';
 import moment from 'moment';
 
-import { Button } from '../atoms/content';
+import { Button } from 'components/atoms/content';
 
 import TooltipWrapper from './tooltip';
 
-import Context from '../../contexts';
-import { useItemPosition } from '../../hooks';
+import Context from 'contexts';
+import { useItemPosition } from 'hooks';
 
 export default React.memo(({ time, disabled, isGroup }) => {
 	const [tooltipVisible, setTooltipVisible] = useState(false);

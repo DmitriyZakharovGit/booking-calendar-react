@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 
-import { HeaderContainer, TitleLabel, Select } from '../atoms/header';
-import { Container } from '../atoms/common';
+import { HeaderContainer, TitleLabel, Select } from 'components/atoms/header';
+import { Container } from 'components/atoms/common';
 
-import { NavigationButton } from '../molecules';
+import { NavigationButton } from 'components/molecules';
 
-import Context from '../../contexts';
-import { useInputValue } from '../../hooks';
-import { DateTimeHelper } from '../../helpers';
+import Context from 'contexts';
+import { useInputValue } from 'hooks';
+import { DateTimeHelper } from 'helpers';
 
 export default () => {
 	const { date } = useContext(Context);

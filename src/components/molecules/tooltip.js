@@ -1,8 +1,8 @@
 import React, { useState, useContext, useEffect } from 'react';
 
-import { Tooltip } from '../atoms/content';
+import { Tooltip } from 'components/atoms/content';
 
-import Context from '../../contexts';
+import Context from 'contexts';
 
 export default () => {
 	const [tooltipInfo, setTooltipInfo] = useState(null);
@@ -21,7 +21,7 @@ export default () => {
 		};
 
 		setTooltipInfo(isGroup ? groupInfo : privateInfo);
-	}, []);
+	}, [isGroup]);
 
 	return (
 		<>

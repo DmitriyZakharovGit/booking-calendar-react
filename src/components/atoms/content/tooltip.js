@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import DefaultGroupIcon from '../../../assets/disabled/group.svg';
+import DefaultGroupIcon from 'assets/disabled/group.svg';
 
 const getHeight = (isGroup) => (isGroup ? 113 : 73);
 

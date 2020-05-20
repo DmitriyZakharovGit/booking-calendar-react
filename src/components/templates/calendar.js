@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import moment from 'moment';
 
-import { Container as CommonContainer } from '../atoms/common';
-import { Container as CalendarContainer } from '../atoms/calendar';
-import { CalendarHeader, CalendarContent } from '../organisms';
+import { Container as CommonContainer } from 'components/atoms/common';
+import { Container as CalendarContainer } from 'components/atoms/calendar';
+import { CalendarHeader, CalendarContent } from 'components/organisms';
 
-import Context from '../../contexts';
-import { DateTimeHelper } from '../../helpers';
+import Context from 'contexts';
+import { DateTimeHelper } from 'helpers';
 
 export default () => {
 	const [date, setDate] = useState(moment());

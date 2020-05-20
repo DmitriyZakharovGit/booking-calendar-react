@@ -1,5 +1,5 @@
 import React from 'react';
 
-import CalendarForm from '../templates';
+import CalendarForm from 'components/templates';
 
 export default () => (<CalendarForm />);

@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 
-import { ContentContainer } from '../atoms/content';
-import { TimelineColumn } from '../molecules';
+import { ContentContainer } from 'components/atoms/content';
+import { TimelineColumn } from 'components/molecules';
 
-import Context from '../../contexts';
+import Context from 'contexts';
 
-export default () => {
+export default React.memo(() => {
 	const { date } = useContext(Context);
 
 	const week = Array(7)
@@ -19,4 +19,4 @@ export default () => {
 			))}
 		</ContentContainer>
 	);
-};
+});

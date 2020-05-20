@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import DefaultArrowIcon from '../../../assets/default/arrow_right.svg';
-import ActiveArrowIcon from '../../../assets/active/arrow_right.svg';
-import HoverArrowIcon from '../../../assets/hover/arrow_right.svg';
+import DefaultArrowIcon from 'assets/default/arrow_right.svg';
+import ActiveArrowIcon from 'assets/active/arrow_right.svg';
+import HoverArrowIcon from 'assets/hover/arrow_right.svg';
 
 import BasicButton from './basicButton';
 
