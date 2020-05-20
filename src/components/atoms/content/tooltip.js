@@ -7,6 +7,7 @@ const getHeight = (isGroup) => (isGroup ? 113 : 73);
 
 const Tooltip = styled.div`
     display: flex;
+    z-index: 1000;
     flex-direction: column;
     width: 185px;
     background: #464646;
