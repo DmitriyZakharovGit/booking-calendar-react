@@ -5,12 +5,14 @@ const Container = styled.div`
 	display: ${(props) => props.display};
 	flex-direction: ${(props) => props.flexDirection};
     flex: ${(props) => props.flex};
+	align-items: ${(props) => props.alignItems};
     justify-content: ${(props) => props.justifyContent};
 	margin: ${(props) => props.margin};
     padding: ${(props) => props.padding};
 `;
 
 Container.propTypes = {
+	alignItems: PropTypes.string,
 	display: PropTypes.string,
 	flex: PropTypes.oneOfType([
 		PropTypes.string,
@@ -23,6 +25,7 @@ Container.propTypes = {
 };
 
 Container.defaultProps = {
+	alignItems: 'normal',
 	display: 'inline-flex',
 	flex: 'unset',
 	flexDirection: 'row',

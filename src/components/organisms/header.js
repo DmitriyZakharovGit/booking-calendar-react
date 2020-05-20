@@ -24,11 +24,11 @@ export default function CalendarHeader() {
 			</Container>
 
 			<Select {...select.bind}>
-				<option>
+				<option value="hh:mm A">
 					Pacific Time – US and Canada ({DateTimeHelper.getPacificTime()})
 				</option>
 
-				<option>
+				<option value="HH:mm">
 					Greenwich Mean Time - Other ({DateTimeHelper.getGMT()})
 				</option>
 			</Select>

@@ -4,7 +4,7 @@ export const getGMT = () => moment().format('HH:mm');
 export const getPacificTime = () => moment().format('hh:mm A');
 export const getDayWeek = (date) => {
 	const weekDay = moment(date).format('dddd').substring(0, 3);
-	const monthDay = moment(date).daysInMonth();
+	const monthDay = moment(date).date();
 
 	return `${weekDay} ${monthDay}`;
 };

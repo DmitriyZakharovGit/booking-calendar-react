@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import moment from 'moment';
 
 import { Container } from '../atoms/common';
 import { TitleLabel, Button } from '../atoms/content';
 
+import Context from '../../contexts';
 import { DateTimeHelper } from '../../helpers';
 import { CalendarService } from '../../services';
 
 export default function TimelineColumn({ date }) {
+	const { timezone } = useContext(Context);
 	const [times, setTimes] = useState([]);
 
-	const DateFormat = DateTimeHelper.getDayWeek(date);
+	const DateFormat = DateTimeHelper.getDayWeek(date.format());
 
 	useEffect(() => {
 		CalendarService
@@ -21,14 +23,18 @@ export default function TimelineColumn({ date }) {
 	}, [date]);
 
 	return (
-		<Container flexDirection="column">
+		<Container alignItems="center" flexDirection="column">
 			<TitleLabel>{DateFormat}</TitleLabel>
 
-			{times.map((item) => (
-				<Button key={item.time} disabled={item.disabled}>
-					{moment(item.time).format('hh:mm')}
-				</Button>
-			))}
+			<>
+				{times.map(({ time, disabled, isGroup }) => (
+					<Button key={time} disabled={disabled} icon={isGroup}>
+						<div className="icon" />
+
+						{moment(time).format(timezone)}
+					</Button>
+				))}
+			</>
 		</Container>
 	);
 }

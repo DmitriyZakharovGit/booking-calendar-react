@@ -17,6 +17,7 @@ mock.onGet('/application/timeline/getList')
 
 				return {
 					disabled: Math.random() > 0.6,
+					isGroup: time.clone().format().includes('11:30'),
 					time: time.clone(),
 				};
 			}),

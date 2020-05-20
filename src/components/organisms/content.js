@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 
 import { ContentContainer } from '../atoms/content';
 import { TimelineColumn } from '../molecules';
@@ -8,13 +8,15 @@ import Context from '../../contexts';
 export default function CalendarHeader() {
 	const { date } = useContext(Context);
 
-	useEffect(() => {
-		// request to server
-	}, []);
+	const week = Array(7)
+		.fill(null)
+		.map((item, index) => date.clone().add(index, 'day'));
 
 	return (
 		<ContentContainer>
-			<TimelineColumn date={date} />
+			{week.map((dateWeek) => (
+				<TimelineColumn date={dateWeek} />
+			))}
 		</ContentContainer>
 	);
 }

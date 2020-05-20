@@ -10,7 +10,7 @@ import { DateTimeHelper } from '../../helpers';
 
 export default function CalendarForm() {
 	const [date, setDate] = useState(moment());
-	const [timezone, setTimezone] = useState(null);
+	const [timezone, setTimezone] = useState('hh:mm A');
 
 	const HeaderValues = {
 		date,
