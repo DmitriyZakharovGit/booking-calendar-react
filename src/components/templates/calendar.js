@@ -8,7 +8,7 @@ import { CalendarHeader, CalendarContent } from '../organisms';
 import Context from '../../contexts';
 import { DateTimeHelper } from '../../helpers';
 
-export default function CalendarForm() {
+export default () => {
 	const [date, setDate] = useState(moment());
 	const [timezone, setTimezone] = useState('hh:mm A');
 
@@ -37,4 +37,4 @@ export default function CalendarForm() {
 			</CommonContainer>
 		</CalendarContainer>
 	);
-}
+};

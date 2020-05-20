@@ -4,7 +4,7 @@ import { NextButton, PrevButton } from '../atoms/header';
 
 import Context from '../../contexts';
 
-export default function NavigationButton() {
+export default () => {
 	const {
 		setNextWeek,
 		setPrevWeek,
@@ -16,4 +16,4 @@ export default function NavigationButton() {
 			<NextButton onClick={setNextWeek} />
 		</>
 	);
-}
+};

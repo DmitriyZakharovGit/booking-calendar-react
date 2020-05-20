@@ -5,7 +5,7 @@ import { TimelineColumn } from '../molecules';
 
 import Context from '../../contexts';
 
-export default function CalendarHeader() {
+export default () => {
 	const { date } = useContext(Context);
 
 	const week = Array(7)
@@ -19,4 +19,4 @@ export default function CalendarHeader() {
 			))}
 		</ContentContainer>
 	);
-}
+};

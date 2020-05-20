@@ -9,7 +9,7 @@ import Context from '../../contexts';
 import { useInputValue } from '../../hooks';
 import { DateTimeHelper } from '../../helpers';
 
-export default function CalendarHeader() {
+export default () => {
 	const { date } = useContext(Context);
 	const select = useInputValue();
 
@@ -34,4 +34,4 @@ export default function CalendarHeader() {
 			</Select>
 		</HeaderContainer>
 	);
-}
+};

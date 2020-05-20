@@ -5,10 +5,10 @@ import { Button } from '../atoms/content';
 
 import TooltipWrapper from './tooltip';
 
-import { useItemPosition } from '../../hooks';
 import Context from '../../contexts';
+import { useItemPosition } from '../../hooks';
 
-export default function TimelineButton({ time, disabled, isGroup }) {
+export default ({ time, disabled, isGroup }) => {
 	const [tooltipVisible, setTooltipVisible] = useState(false);
 	const { timezone } = useContext(Context);
 
@@ -42,4 +42,4 @@ export default function TimelineButton({ time, disabled, isGroup }) {
 			)}
 		</>
 	);
-}
+};

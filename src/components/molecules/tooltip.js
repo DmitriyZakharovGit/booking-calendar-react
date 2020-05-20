@@ -4,7 +4,7 @@ import { Tooltip } from '../atoms/content';
 
 import Context from '../../contexts';
 
-export default function TooltipWrapper() {
+export default () => {
 	const [tooltipInfo, setTooltipInfo] = useState(null);
 	const { isGroup, styles } = useContext(Context);
 
@@ -47,4 +47,4 @@ export default function TooltipWrapper() {
 			)}
 		</>
 	);
-}
+};
