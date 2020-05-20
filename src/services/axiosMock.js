@@ -3,7 +3,7 @@ import MockAdapter from 'axios-mock-adapter';
 import moment from 'moment';
 
 const mock = new MockAdapter(axios, {
-	delayResponse: 900,
+	delayResponse: 300,
 });
 
 const getTimeline = () => {
