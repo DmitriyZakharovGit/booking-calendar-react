@@ -8,7 +8,7 @@ import TooltipWrapper from './tooltip';
 import Context from '../../contexts';
 import { useItemPosition } from '../../hooks';
 
-export default ({ time, disabled, isGroup }) => {
+export default React.memo(({ time, disabled, isGroup }) => {
 	const [tooltipVisible, setTooltipVisible] = useState(false);
 	const { timezone } = useContext(Context);
 
@@ -42,4 +42,4 @@ export default ({ time, disabled, isGroup }) => {
 			)}
 		</>
 	);
-};
+});

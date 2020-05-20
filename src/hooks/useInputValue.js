@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 
 import Context from '../contexts';
 
-export default function useInputValue(...args) {
+export default (...args) => {
 	const [value, setValue] = useState('');
 	const { onChange } = useContext(Context);
 
@@ -19,4 +19,4 @@ export default function useInputValue(...args) {
 		clear: () => setValue(''),
 		value: () => value,
 	};
-}
+};
