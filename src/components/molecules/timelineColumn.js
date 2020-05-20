@@ -15,17 +15,19 @@ export default function TimelineColumn({ date }) {
 
 	useEffect(() => {
 		CalendarService
-			.GetList()
+			.getList(date.format())
 			.then((responseData) => {
 				setTimes(responseData.data.items);
 			});
 	}, [date]);
 
 	return (
-		<Container alignItems="center" flexDirection="column">
+		<Container alignItems="center" flexDirection="column" position="relative">
 			<TitleLabel>{DateFormat}</TitleLabel>
 
-			{times.map((item) => (<TimelineButton {...item} />))}
+			{times.map((item) => (
+				<TimelineButton {...item} key={item.time} />
+			))}
 		</Container>
 	);
 }

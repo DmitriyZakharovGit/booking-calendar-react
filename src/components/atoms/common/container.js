@@ -9,6 +9,7 @@ const Container = styled.div`
     justify-content: ${(props) => props.justifyContent};
 	margin: ${(props) => props.margin};
     padding: ${(props) => props.padding};
+    position: ${(props) => props.position};
 `;
 
 Container.propTypes = {
@@ -22,6 +23,7 @@ Container.propTypes = {
 	justifyContent: PropTypes.string,
 	margin: PropTypes.string,
 	padding: PropTypes.string,
+	position: PropTypes.string,
 };
 
 Container.defaultProps = {
@@ -32,6 +34,7 @@ Container.defaultProps = {
 	justifyContent: 'normal',
 	margin: '0',
 	padding: '0',
+	position: 'unset',
 };
 
 export default Container;

@@ -5,6 +5,7 @@ export default styled.div`
     flex-direction: row;
     padding-top: 24px;
     max-height: 400px;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: visible;
     justify-content: space-around;
 `;
