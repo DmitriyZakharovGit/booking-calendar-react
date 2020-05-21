@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import moment from 'moment';
 
 import { Container as CommonContainer } from 'components/atoms/common';
@@ -12,11 +12,19 @@ export default () => {
 	const [date, setDate] = useState(moment());
 	const [timezone, setTimezone] = useState('hh:mm A');
 
+	const setNextWeek = useCallback(() => {
+		setDate(DateTimeHelper.nextWeek(date));
+	}, [date]);
+
+	const setPrevWeek = useCallback(() => {
+		setDate(DateTimeHelper.prevWeek(date));
+	}, [date]);
+
 	const HeaderValues = {
 		date,
 		onChange: setTimezone,
-		setNextWeek: () => setDate(DateTimeHelper.nextWeek(date)),
-		setPrevWeek: () => setDate(DateTimeHelper.prevWeek(date)),
+		setNextWeek,
+		setPrevWeek,
 	};
 
 	const ContentValues = {

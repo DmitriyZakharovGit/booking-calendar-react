@@ -8,8 +8,7 @@ import Context from 'contexts';
 export default React.memo(() => {
 	const { date } = useContext(Context);
 
-	const week = Array(7)
-		.fill(null)
+	const week = [...Array(7)]
 		.map((item, index) => date.clone().add(index, 'day'));
 
 	return (
