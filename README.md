@@ -22,12 +22,12 @@ Two hooks are created to speed up the development process:
 2. **useItemPosition** - to work with item position via **ref**.
 
 ## 👨‍💻 Technology stack
-1. **axios** with axios mock adapter for mock requests;
-2. **momentjs** for working with dates;
-3. **prop-types** for validation props;
-4. **webfontloader** for load Roboto font;
-5. **styled-components** for style components;
-6. **eslint** for code style.
+1. **axios** with axios mock adapter to mock requests;
+2. **momentjs** to working with dates;
+3. **prop-types** to validation props;
+4. **webfontloader** to load Roboto font;
+5. **styled-components** to style components;
+6. **eslint** to code style.
 
 ## 👀 Look result
 If you want to see results click [link here](https://calendar-test-task.netlify.app).
