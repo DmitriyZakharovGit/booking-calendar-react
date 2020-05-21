@@ -1,18 +1,28 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, {
+	useContext, useRef, useState, useCallback,
+} from 'react';
 import moment from 'moment';
 
 import { Button } from 'components/atoms/content';
 
-import TooltipWrapper from './tooltip';
 
 import Context from 'contexts';
 import { useItemPosition } from 'hooks';
+import TooltipWrapper from './tooltip';
 
 export default React.memo(({ time, disabled, isGroup }) => {
 	const [tooltipVisible, setTooltipVisible] = useState(false);
 	const { timezone } = useContext(Context);
 
 	const buttonRef = useRef(null);
+
+	const setVisible = useCallback(() => {
+		setTooltipVisible(true);
+	}, [tooltipVisible]);
+
+	const setInvisible = useCallback(() => {
+		setTooltipVisible(false);
+	}, [tooltipVisible]);
 
 	const tooltipValues = {
 		isGroup,
@@ -27,8 +37,8 @@ export default React.memo(({ time, disabled, isGroup }) => {
 				ref={buttonRef}
 				disabled={disabled}
 				icon={isGroup}
-				onMouseEnter={() => setTooltipVisible(true)}
-				onMouseLeave={() => setTooltipVisible(false)}
+				onMouseEnter={setVisible}
+				onMouseLeave={setInvisible}
 			>
 				<label className="icon" />
 
